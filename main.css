@@ -7,9 +7,46 @@ body {
 
 .image-container {
   margin-top: 40px;
-  margin-bottom: 20px;
   width: 600px;
   height: 250px;
   background-color: #d5cee2;
   border-radius: 15px;
+}
+
+.option-number,
+.option-kind-of,
+.option-category,
+.option-not-eat {
+  margin-top: 20px;
+}
+
+.number-header,
+.kind-of-header,
+.category-header,
+.not-eat-header {
+  color: #3c2e51;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.number-header span,
+.kind-of-header span,
+.category-header span,
+.not-eat-header span {
+  font-size: 10px;
+}
+
+.number-item,
+.kind-of-item,
+.category-item {
+  margin-top: 8px;
+  margin-right: 10px;
+  width: 75px;
+  height: 45px;
+  border: solid 2px #cfc5e2;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+  color: #3c2e51;
 }
