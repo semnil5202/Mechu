@@ -6,34 +6,46 @@ body {
 }
 
 .image-container {
-  margin-top: 40px;
+  margin-top: 20px;
   width: 600px;
   height: 250px;
   background-color: #d5cee2;
   border-radius: 15px;
 }
 
-.option-number,
-.option-kind-of,
-.option-category,
-.option-not-eat {
-  margin-top: 20px;
-}
-
 .number-header,
 .kind-of-header,
 .category-header,
 .not-eat-header {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.number-header h2,
+.kind-of-header h2,
+.category-header h2,
+.not-eat-header h2 {
+  margin: 0;
   color: #3c2e51;
   font-size: 20px;
   font-weight: bold;
 }
 
-.number-header span,
-.kind-of-header span,
-.category-header span,
-.not-eat-header span {
-  font-size: 10px;
+.header-circle-mark {
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #3c2e51;
+  border-color: #3c2e51;
+  border-radius: 5px;
+}
+
+.number-item-container,
+.kind-of-item-container,
+.category-item-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .number-item,
