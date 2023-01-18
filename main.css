@@ -41,11 +41,24 @@ body {
   border-radius: 5px;
 }
 
+.not-eat-circle-mark {
+  margin-right: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border: 2px solid #3c2e51;
+  border-radius: 5px;
+}
+
 .number-item-container,
 .kind-of-item-container,
 .category-item-container {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.not-eat-item-container {
   margin-left: 20px;
 }
 
@@ -62,4 +75,25 @@ body {
   font-size: 16px;
   cursor: pointer;
   color: #3c2e51;
+}
+
+.not-eat-item {
+  display: flex;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.not-eat-item span {
+  color: #3c2e51;
+  font-weight: bold;
+}
+
+.not-eat-item input {
+  width: 350px;
+  height: 30px;
+  border: solid 2px #cfc5e2;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 14px;
+  margin-left: 8px;
 }
