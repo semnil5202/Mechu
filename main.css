@@ -95,5 +95,22 @@ body {
   border-radius: 5px;
   background-color: white;
   font-size: 14px;
-  margin-left: 8px;
+  margin-left: 10px;
+}
+
+.confirm-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.confirm-button button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3c2e51;
+  width: 180px;
+  height: 50px;
+  background-color: #cfc5e2;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
 }
