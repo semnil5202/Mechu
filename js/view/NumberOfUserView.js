@@ -15,6 +15,6 @@ export default class NumberOfUserView {
   }
 
   conditionFunc(event) {
-    console.dir(event.target.checked);
+    console.dir(event.target.checked); //
   }
 }
