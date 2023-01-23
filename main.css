@@ -5,6 +5,10 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .image-container {
   margin-top: 20px;
   width: 600px;
