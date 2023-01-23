@@ -132,12 +132,12 @@ body {
   margin-left: 10px;
 }
 
-.confirm-button {
+.confirm-form {
   margin-top: 40px;
   text-align: center;
 }
 
-.confirm-button button {
+.confirm-form button {
   font-size: 20px;
   font-weight: bold;
   color: #3c2e51;
