@@ -1,16 +1,18 @@
 export default class kindOfCategoryView {
   meal = document.querySelector('.kind-of-item-container div:nth-child(1) label');
   cafe = document.querySelector('.kind-of-item-container div:nth-child(2) label');
+  category = document.querySelector('.option-category');
 
   constructor() {
-    this.meal.addEventListener('click', this.checkKindOf);
-    this.cafe.addEventListener('click', this.checkKindOf);
+    this.meal.addEventListener('click', () => this.displayCategory());
+    this.cafe.addEventListener('click', () => this.hiddenCategory());
   }
 
-  checkKindOf(event) {
-    const category = document.querySelector('.option-category');
+  hiddenCategory() {
+    this.category.classList.add('hidden');
+  }
 
-    if (event.target.innerText === '식사') category.classList.remove('hidden');
-    if (event.target.innerText === '카페') category.classList.add('hidden');
+  displayCategory() {
+    this.category.classList.remove('hidden');
   }
 }
