@@ -1,1 +1,1 @@
-export default class recommendMenu {}
+export default class RecommendMenu {}
