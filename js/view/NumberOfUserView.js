@@ -7,7 +7,6 @@ export default class NumberOfUserView {
     ['thirdNumber', document.querySelector('.number-item-container div:nth-child(3) label')],
     ['forthNumber', document.querySelector('.number-item-container div:nth-child(4) label')],
   ]);
-  notEatItem = document.querySelector('.not-eat-item-container');
 
   constructor() {
     for (const value of this.numbers.values()) {
