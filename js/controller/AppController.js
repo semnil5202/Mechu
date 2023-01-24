@@ -1,6 +1,7 @@
 import kindOfCategoryView from '../view/kindOfCategoryView.js';
 import NumberOfUserView from '../view/NumberOfUserView.js';
 import AppService from '../service/AppService.js';
+import resultFormView from '../view/resultFormView.js';
 
 export default class AppController {
   confirmButton;
@@ -14,6 +15,7 @@ export default class AppController {
       .addEventListener('click', (event) => this.submitForm(event));
     this.numberOfUserView = new NumberOfUserView(); // DI 필요
     this.kindOfCategoryView = new kindOfCategoryView();
+    this.resultFormView = new resultFormView();
     this.appService = new AppService();
   }
 
@@ -32,7 +34,9 @@ export default class AppController {
       this.recordNotEatList(dataSet, i);
     }
 
-    this.appService.init(dataSet);
+    const menus = this.appService.init(dataSet);
+    this.resultFormView.init(Number(dataSet.number.innerText[0]), menus);
+    this.resultFormView.showResultView();
   }
 
   recordNotEatList(dataSet, i) {
