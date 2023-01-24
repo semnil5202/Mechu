@@ -10,6 +10,7 @@ export default class AppController {
   kindOfCategoryView;
   appService;
 
+  // TODO : DI 작업 필요, 생성시점 조절해서 각 init 함수 재검토
   constructor() {
     this.confirmButton = document
       .querySelector('.confirm-form button')
@@ -23,6 +24,7 @@ export default class AppController {
     this.appService = new AppService();
   }
 
+  // TODO : dataSet View에서 처리 가능한지?
   submitForm(event) {
     event.preventDefault();
 

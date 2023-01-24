@@ -5,6 +5,8 @@ export default class ResultFormView {
   menus;
   number;
 
+  // TODO : 생성 시점 고려해서 init 메서드 필요 여부 파악
+  // optionForm 은 이 View 파일에서 조작하는 것이 맞는지 확인해볼것
   init(number, menus) {
     this.number = number;
     this.menus = menus;
@@ -21,6 +23,7 @@ export default class ResultFormView {
     }
   }
 
+  // NumberOfUserView 의 initInner 메서드와 동일한 형태 -> 추상화 할 수 있는지
   initInner() {
     this.resultMenuContainer.innerHTML = `
     <div class="result-menu-item">
