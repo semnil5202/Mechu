@@ -1,27 +1,35 @@
 export default class RecommendMenu {
+  data = {
+    category: [],
+    notEats: [],
+  };
   menuList = [];
+  recommended = [];
 
   constructor(category, notEats) {
-    this.menuList = category.filter((el) => !notEats.includes(el));
+    this.data.category = [...category];
+    this.data.notEats = [...notEats];
+    this.initMenuList();
+  }
+
+  initMenuList() {
+    this.menuList = this.data.category.filter((el) => !this.data.notEats.includes(el));
+    this.recommended = [];
   }
 
   decisionMenu() {
-    return this.menuList[Math.floor(Math.random() * this.menuList.length)];
+    if (this.menuList.length === 0) this.initMenuList();
+    const menu = this.menuList[Math.floor(Math.random() * this.menuList.length)];
+    this.recommendedMenu(menu);
+    return menu;
   }
 
-  // 먹지 않는 메뉴 걸러주는 기능 -> 설계 수정 후 진행
-  //   isEatMenu() {}
+  recommendedMenu(menu) {
+    this.recommended.push(menu);
+    this.deleteRecommendedMenu();
+  }
 
-  //   중복 메뉴 재추천 방지 기능
-  //   this.recommendeds = []; (필드 선언으로 변경 필요)
-  //   isRecommended(menu) {
-  //     if (this.recommendeds.includes(menu)) return true;
-  //     return false;
-  //   }
-
-  //   makeEachRecords() {
-  //     for (let i = 0; i < this.number; i++) {
-  //       this.recommendeds.push([]);
-  //     }
-  //   }
+  deleteRecommendedMenu() {
+    this.menuList = this.menuList.filter((el) => !this.recommended.includes(el));
+  }
 }
