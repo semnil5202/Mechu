@@ -3,15 +3,25 @@ import RecommendMenu from '../model/RecommendMenu.js';
 
 export default class AppService {
   category;
-  recommendMenu;
+  recommendMenus = [];
 
   init({ number, kindOf, category, notEats }) {
     this.category = new Category(kindOf.innerText, category.innerText);
+    for (let i = 0; i < Number(number.innerText[0]); i++) {
+      this.makeRecommendInstance(i, notEats);
+    }
+  }
 
-    // TODO
-    // 설계 미스 : 하나의 추천메뉴 X -> 사람한명당 인스턴스화 및 개개인 추천메뉴로
-    this.recommendMenu = new RecommendMenu(number.innerText, this.category.getData(), notEats);
-    console.log(this.recommendMenu.getResult());
+  makeRecommendInstance(i, notEats) {
+    this.recommendMenus.push(
+      new RecommendMenu(
+        this.category.getData(),
+        notEats
+          .get(`${i + 1}`)
+          .split(',')
+          .map((el) => el.trim()),
+      ),
+    );
   }
 
   decisionCategory() {}
