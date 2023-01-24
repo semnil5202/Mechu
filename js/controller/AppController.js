@@ -1,6 +1,6 @@
 import kindOfCategoryView from '../view/kindOfCategoryView.js';
 import NumberOfUserView from '../view/NumberOfUserView.js';
-import AppService from '../service/appService.js';
+import AppService from '../service/AppService.js';
 
 export default class AppController {
   confirmButton;

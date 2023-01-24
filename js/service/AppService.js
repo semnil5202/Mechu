@@ -1,5 +1,5 @@
-import Category from '../model/category.js';
-import RecommendMenu from '../model/recommendMenu.js';
+import Category from '../model/Category.js';
+import RecommendMenu from '../model/RecommendMenu.js';
 
 export default class AppService {
   category;
