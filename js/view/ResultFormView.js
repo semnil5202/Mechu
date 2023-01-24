@@ -1,4 +1,4 @@
-export default class resultFormView {
+export default class ResultFormView {
   resultForm = document.querySelector('.result-container');
   optionForm = document.querySelector('.option-container');
   resultMenuContainer = document.querySelector('.result-menu-container');

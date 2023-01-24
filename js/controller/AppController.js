@@ -1,7 +1,7 @@
 import kindOfCategoryView from '../view/kindOfCategoryView.js';
 import NumberOfUserView from '../view/NumberOfUserView.js';
 import AppService from '../service/AppService.js';
-import resultFormView from '../view/resultFormView.js';
+import ResultFormView from '../view/ResultFormView.js';
 
 export default class AppController {
   confirmButton;
@@ -15,7 +15,7 @@ export default class AppController {
       .addEventListener('click', (event) => this.submitForm(event));
     this.numberOfUserView = new NumberOfUserView(); // DI 필요
     this.kindOfCategoryView = new kindOfCategoryView();
-    this.resultFormView = new resultFormView();
+    this.resultFormView = new ResultFormView();
     this.appService = new AppService();
   }
 
