@@ -10,7 +10,7 @@ export default class AppService {
     for (let i = 0; i < Number(number.innerText[0]); i++) {
       this.makeRecommendInstance(i, notEats);
     }
-    return this.recommendMenus;
+    return this.recommendMenus.map((el) => el.decisionMenu());
   }
 
   makeRecommendInstance(i, notEats) {
@@ -21,9 +21,11 @@ export default class AppService {
           .get(`${i + 1}`)
           .split(',')
           .map((el) => el.trim()),
-      ).decisionMenu(),
+      ),
     );
   }
 
-  decisionCategory() {}
+  reRecommendMenu() {
+    return this.recommendMenus.map((el) => el.decisionMenu());
+  }
 }

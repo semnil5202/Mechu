@@ -8,7 +8,10 @@ export default class ResultFormView {
   init(number, menus) {
     this.number = number;
     this.menus = menus;
-    console.log(this.number, this.menus);
+  }
+
+  reInitMenus(menus) {
+    this.menus = menus;
   }
 
   renderMenuItem() {

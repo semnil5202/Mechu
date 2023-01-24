@@ -5,6 +5,7 @@ import ResultFormView from '../view/ResultFormView.js';
 
 export default class AppController {
   confirmButton;
+  retryButton;
   numberOfUserView;
   kindOfCategoryView;
   appService;
@@ -13,7 +14,10 @@ export default class AppController {
     this.confirmButton = document
       .querySelector('.confirm-form button')
       .addEventListener('click', (event) => this.submitForm(event));
-    this.numberOfUserView = new NumberOfUserView(); // DI 필요
+    this.retryButton = document
+      .querySelector('.retry-form button:nth-child(1)')
+      .addEventListener('click', (event) => this.retryForm(event));
+    this.numberOfUserView = new NumberOfUserView();
     this.kindOfCategoryView = new kindOfCategoryView();
     this.resultFormView = new ResultFormView();
     this.appService = new AppService();
@@ -44,5 +48,13 @@ export default class AppController {
       `${i + 1}`,
       document.querySelector(`.not-eat-item-container div:nth-child(${i + 1}) input`).value,
     );
+  }
+
+  retryForm(event) {
+    event.preventDefault();
+
+    const menus = this.appService.reRecommendMenu();
+    this.resultFormView.reInitMenus(menus);
+    this.resultFormView.showResultView();
   }
 }
