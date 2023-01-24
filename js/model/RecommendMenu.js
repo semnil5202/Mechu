@@ -1,28 +1,12 @@
 export default class RecommendMenu {
-  number;
-  category;
-  notEats;
+  menuList = [];
 
-  constructor(number, category, notEats) {
-    this.number = Number(number[0]);
-    this.category = category;
-    this.notEats = notEats;
+  constructor(category, notEats) {
+    this.menuList = category.filter((el) => !notEats.includes(el));
   }
 
-  getResult() {
-    return this.descisionMenu();
-  }
-
-  descisionMenu() {
-    const recommendeds = [];
-    for (let i = 0; i < this.number; i++) {
-      recommendeds.push(this.makeRandomMenu());
-    }
-    return recommendeds;
-  }
-
-  makeRandomMenu() {
-    return this.category[Math.floor(Math.random() * this.category.length)];
+  decisionMenu() {
+    return this.menuList[Math.floor(Math.random() * this.menuList.length)];
   }
 
   // 먹지 않는 메뉴 걸러주는 기능 -> 설계 수정 후 진행
