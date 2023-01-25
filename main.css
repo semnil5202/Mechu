@@ -10,9 +10,9 @@ body {
 }
 
 .image-container {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 600px;
-  height: 250px;
+  height: 200px;
   background-color: #d5cee2;
   border-radius: 15px;
 }
@@ -133,7 +133,7 @@ body {
 }
 
 .confirm-form {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -151,7 +151,7 @@ body {
 
 /* result section */
 .result-menu-container {
-  margin: 20px 0 auto;
+  margin: 20px auto;
   width: 580px;
   display: flex;
   justify-content: center;
@@ -159,8 +159,10 @@ body {
 }
 
 .result-menu-item {
+  display: flex;
+  flex-direction: column;
   width: 266px;
-  height: 216px;
+  height: 256px;
   margin: 0 10px 20px 10px;
   border: 2px solid #cfc5e2;
   border-radius: 10px;
@@ -168,22 +170,21 @@ body {
 
 .result-number {
   margin: 2px 0 0 10px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   color: #3c2e51;
 }
 
 .result-image {
-  display: block;
-  width: 148px;
-  height: 148px;
+  width: 178px;
+  height: 178px;
   border: 1px solid #3c2e51;
   border-radius: 5%;
   margin: 0 auto;
 }
 
 .result-menu-title {
-  margin: 5px 0 0 0;
+  margin: 6px 0;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -191,7 +192,7 @@ body {
 }
 
 .retry-form {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 
