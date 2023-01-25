@@ -28,7 +28,7 @@ export default class ResultFormView {
     this.resultMenuContainer.innerHTML = `
     <div class="result-menu-item">
       <h2 class="result-number">A</h2>
-      <img class="result-image" src="" alt="img" />
+      <img class="result-image" src="../../img/food/${this.menus[0]}.svg" alt="img" />
       <h2 class="result-menu-title">${this.menus[0]}</h2>
     </div>`;
   }
@@ -41,7 +41,7 @@ export default class ResultFormView {
     this.resultMenuContainer.innerHTML += `
     <div class="result-menu-item">
       <h2 class="result-number">${user}</h2>
-      <img class="result-image" src="" alt="img" />
+      <img class="result-image" src="../../img/food/${this.menus[i]}.svg" alt="img" />
       <h2 class="result-menu-title">${this.menus[i]}</h2>
     </div>`;
   }
