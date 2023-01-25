@@ -92,6 +92,7 @@ body {
   height: 45px;
   padding: auto;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .number-item input[type='radio'],
@@ -147,6 +148,10 @@ body {
   border: 0;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.confirm-form button:active {
+  box-shadow: inset 2px 2px 8px #3c2e51;
 }
 
 /* result section */
@@ -208,4 +213,8 @@ body {
   border-radius: 10px;
   cursor: pointer;
   margin: 0 10px;
+}
+
+.retry-form button:active {
+  box-shadow: inset 2px 2px 8px #3c2e51;
 }
