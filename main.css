@@ -181,6 +181,7 @@ body {
   border: 1px solid #3c2e51;
   border-radius: 5%;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .result-menu-title {
