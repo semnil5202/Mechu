@@ -2,7 +2,6 @@ export default class ResultFormView {
   resultForm = document.querySelector('.result-container');
   optionForm = document.querySelector('.option-container');
   resultMenuContainer = document.querySelector('.result-menu-container');
-  imageSelectors = [];
   menus;
   number;
 
@@ -19,15 +18,8 @@ export default class ResultFormView {
 
   renderMenuItem() {
     this.initInner();
-    this.imageSelectors.push(document.querySelector('.result-menu-container div:nth-child(1) img'));
-    this.initImage();
-
     for (let i = 1; i < this.number; i++) {
       this.makeInner(i);
-      this.imageSelectors.push(
-        document.querySelector(`.result-menu-container div:nth-child(${i + 1}) img`),
-      );
-      this.makeImage(i);
     }
   }
 
@@ -36,14 +28,9 @@ export default class ResultFormView {
     this.resultMenuContainer.innerHTML = `
     <div class="result-menu-item">
       <h2 class="result-number">A</h2>
-      <img class="result-image" src="" alt="img" />
+      <img class="result-image" src="img/food/${this.menus[0]}.png" alt="img" />
       <h2 class="result-menu-title">${this.menus[0]}</h2>
     </div>`;
-  }
-
-  initImage() {
-    console.log(this.imageSelectors[0]);
-    this.imageSelectors[0].src = `../../img/food/${this.menus[0]}.png`;
   }
 
   makeInner(i) {
@@ -54,13 +41,9 @@ export default class ResultFormView {
     this.resultMenuContainer.innerHTML += `
     <div class="result-menu-item">
       <h2 class="result-number">${user}</h2>
-      <img class="result-image" src="" alt="img" />
+      <img class="result-image" src="img/food/${this.menus[i]}.png" alt="img" />
       <h2 class="result-menu-title">${this.menus[i]}</h2>
     </div>`;
-  }
-
-  makeImage(i) {
-    this.imageSelectors[i].src = `../../img/food/${this.menus[i]}.png`;
   }
 
   showResultView() {
