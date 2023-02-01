@@ -270,26 +270,26 @@ body {
 
   .result-menu-item {
     margin: 0 2vw 4vw 2vw;
-    width: 240px;
-    height: 240px;
+    width: 40vw;
+    height: 40vw;
   }
 
   .result-number {
-    font-size: 16px;
+    font-size: 3.5vw;
   }
 
   .result-image {
-    width: 178px;
-    height: 178px;
+    width: 26vw;
+    height: 26vw;
   }
 
   .result-menu-title {
-    margin: 6px 0;
-    font-size: 16px;
+    margin: 1.5vw 0;
+    font-size: 3.5vw;
   }
 
   .retry-form button {
-    font-size: 16px;
+    font-size: 4vw;
     width: 35vw;
   }
 }
